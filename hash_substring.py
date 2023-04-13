@@ -4,11 +4,14 @@ def read_input():
     input_type = input()
 
     if input_type == "F":
-        file_name = "tests/06"
+        file_name = input().strip()
+        if ".a" in file_name:
+            return
+        if "tests/" not in file_name:
+            file_name = "tests/" + file_name
         with open(file_name) as f:
-            lines = f.readlines()
-            pattern = lines[0].strip()
-            text = lines[1].strip()
+            pattern = f.readline().strip()
+            text = f.readline().strip()
     elif "I" in input_type:
         pattern = input().strip()
         text = input().strip()

@@ -8,7 +8,7 @@ def read_input():
         if ".a" in file_name:
             return
         if "tests/06" not in file_name:
-            file_name = "tests/06" + file_name
+            file_name = "tests/06"
         with open(file_name) as f:
             pattern = f.readline().strip()
             text = f.readline().strip()

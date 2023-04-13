@@ -4,8 +4,8 @@ def read_input():
     input_type = input()
 
     if input_type == "F":
-        file = "tests/06"
-        with open(file) as f:
+        file_name = "tests/06"
+        with open(file_name) as f:
             text1 = f.readlines()
             pattern = text1[0].strip()
             text = text1[1].strip()
